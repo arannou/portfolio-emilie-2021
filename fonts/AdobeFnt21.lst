@@ -1,0 +1,74 @@
+%!Adobe-FontList 1.20
+%Locale:0x40c
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Lato-Light
+FamilyName:Lato
+StyleName:Light
+FullName:Lato Light
+MenuName:Lato Light
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\erannou\Documents\JOB\2020\Dossier book decembre\Document fonts\Lato-Light.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:644556
+FileModTime:1438879320
+WeightClass:300
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Lato Light
+NameArray:0,Win,1,Lato Light
+NameArray:0,Win,16,Lato
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Lato-Regular
+FamilyName:Lato
+StyleName:Regular
+FullName:Lato Regular
+MenuName:Lato
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\erannou\Documents\JOB\2020\Dossier book decembre\Document fonts\Lato-Regular.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:657212
+FileModTime:1438879320
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Lato Regular
+NameArray:0,Win,1,Lato
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Lato-Thin
+FamilyName:Lato
+StyleName:Thin
+FullName:Lato Thin
+MenuName:Lato Thin
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\erannou\Documents\JOB\2020\Dossier book decembre\Document fonts\Lato-Thin.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:627220
+FileModTime:1438879320
+WeightClass:275
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Lato Thin
+NameArray:0,Win,1,Lato Thin
+NameArray:0,Win,16,Lato
+%EndFont
+
