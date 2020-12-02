@@ -148,7 +148,7 @@ nav li.active a {
 	margin-top: 8rem;
 
 }
-.slide.img.small.low img{
+.slide.img.small.low img, .slide.img.low .video{
 	margin-top: auto;
 	margin-bottom: 8rem;
 }
@@ -164,21 +164,23 @@ nav li.active a {
 .slide.text.title{
 	font-size: 1.5rem;
 }
-/* .slide.text.high {
-	padding: 8rem 0 0 0;
-	margin: 0;
-	margin-bottom: auto;
-} */
 .slide.text.low {
 	padding: 0 0 3rem 0;
 }
-.slide.text.middle {
-	padding: 8rem 0 0 0;
-	margin-bottom: auto;
+.slide.text.high {
+	padding: 0;
+	height: 40vh;
+	margin-top: 8rem;
+
+	position: relative;
 }
-/* .slide.text.high p.caps{
-	margin-top: 0;
-} */
+.slide.text.high .high-container{
+	position: absolute;
+	bottom: 0;
+}
+.high-container>p:last-child {
+	margin-bottom: 0;
+}
 
 /************** SLIDE VARIANTS (misc) ********************/
 .video {
@@ -186,22 +188,33 @@ nav li.active a {
 	transform-origin: top right;
 	transform: rotate(-90deg) translateX(-100vh);
 }
+.video.big {
+	margin-bottom: 0;
+}
 .video video {
 	height: 40vh;
 	transform-origin: top right;
 	transform: rotate(90deg) translateY(-100vh);
+}
+.video.big video {
+	height: 95vh;
 }
 .caps {
 	letter-spacing: 10px
 }
 
 /************** SLIDE VARIANTS (link) ********************/
-.slide.next {
+.slide.next a{
+	padding: 0 0 8rem 0;
+	margin-top: auto;
+	height: auto;
+	flex-direction: column;
 	min-width: min-content;
-	/* word-wrap: break-word; */
+}
+.slide.next {
 	background-color: rgba(45,184,137, 1);
 	transition: background-color .5s;
-	width: 100vw;
+	width: min-content;
     height: 100vh;
 	display: flex;
 	flex-direction: column;
