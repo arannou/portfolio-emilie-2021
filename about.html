@@ -12,39 +12,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" type="text/css" href="css/base.css" />
-    <link rel="stylesheet" type="text/css" href="css/about.css" />
 
     <script src="script.js"></script>
-
-
 </head>
 
 <body>
-
     <header>
         <nav>
             <ul>
                 <li>
                     <a href="./index.html#2">Accueil</a>
                 </li>
-                <li class="active">
-                    <a href="#about">À propos</a>
+                <li>
+                    <a href="./about.html">À propos</a>
                 </li>
                 <li>
             </ul>
         </nav>
         <h1>Émilie Rannou - Designer textile</h1>
     </header>
-    <div>
-        <div class="social">
-            <button>
-                <a href="Emilie-Rannou_Curriculum-vitae_2020.pdf" target="_blank">Curriculum Vitae</a>
-            </button>
-            <a href="https://www.instagram.com/emilie.rannou/?hl=fr" target="_blank"><img alt="Instagram"
-                    src="logo-instagram.webp" style="width: 30px; height: 30px; object-fit: cover;"></a>
-            <a href="http://linkedin.com/in/emilie-rannou-19b86a112/" target="_blank"><img alt="Instagram"
-                    src="logo-linkedin.webp" style="width: 30px; height: 30px; object-fit: cover;"></a>
-        </div>
+    <div class="container">
 
+        <div class="blocHorizontal">
+            <div class="slide text title space-3">
+                <p class="caps">CONTACT</p>
+                <p>et à propos</p>
+            </div>
+
+            <div class="slide text space-5">
+                <p class="caps">PRÉSENTATION</p>
+                <p>Lorem ipsum</p>
+            </div>
+            <div class="slide text space-1">
+                <a href="Emilie-Rannou_Curriculum-vitae_2020.pdf" target="_blank">CV</a>
+                <a href="https://www.instagram.com/emilie.rannou/?hl=fr" target="_blank">Instagram</a>
+                <a href="http://linkedin.com/in/emilie-rannou-19b86a112/" target="_blank">LinkedIn</a>
+            </div>
+
+            <div class="slide img space-2"><img src="img/page 4 composer/emilie rannou composer 21.jpg" /></div>
+            <div class="slide jerky" data-image="page 4 composer/emilie rannou composer 21.jpg"
+                data-direction="decrease" data-repeat="10" data-size="small">
+            </div>
+            <a href="./index.html#2" class="slide next space-1">
+                <div>
+                    <p class="caps">RETOUR À L'ACCUEIL</p>
+                </div>
+            </a>
+        </div>
     </div>
 </body>
