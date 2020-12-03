@@ -102,8 +102,8 @@ nav li a, nav li.active a, .bouton a {
 	display: block;
 }
 
-nav li.active a {
-	color: #ff8623;
+nav li.active a, a:not(.slide):not(.inner-slide):hover {
+	color:  rgba(45,184,137, 1);
 }
 
 
@@ -159,7 +159,7 @@ nav li.active a {
 	margin-top: auto;
 	height: auto;
 	flex-direction: column;
-	min-width: 30vw;
+	min-width: 25vw;
 }
 .slide.text.title{
 	font-size: 1.5rem;
