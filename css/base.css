@@ -76,7 +76,7 @@ nav {
 	flex: initial;
 }
 
- nav ul {
+nav ul {
 	display: flex;
 	flex-direction: row;
 	margin: .5rem;
@@ -204,17 +204,10 @@ nav li.active a, a:not(.slide):not(.inner-slide):hover {
 }
 
 /************** SLIDE VARIANTS (link) ********************/
-.slide.next div{
-	padding: 0 0 8rem 0;
-	margin-top: auto;
-	height: auto;
-	flex-direction: column;
-	min-width: min-content;
-}
-.slide.next {
-	background-color: rgba(45,184,137, 1);
-	transition: background-color .5s;
-	width: min-content;
+.menu-slide {
+	position: relative;
+    z-index: 1;
+    width: 100vw;
     height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -223,7 +216,44 @@ nav li.active a, a:not(.slide):not(.inner-slide):hover {
 	font-size: 1.25rem;
 	padding: 1rem;
 }
-.slide.next:hover {
+
+.menu-slide::before {
+	content: "";
+	position: absolute;
+	top: 0; 
+	left: 0;
+	width: 100%; 
+	height: 100%;  
+	opacity: .5; 
+	transition: opacity 0.5s;
+	z-index: -1;
+	background-size: cover;
+	background-position-x: center;
+}
+
+.menu-slide div{
+	padding: 0 0 8rem 0;
+	margin-top: auto;
+	height: auto;
+	flex-direction: column;
+	min-width: 30vh;
+}
+
+.menu-slide:hover::before {
+	opacity: 0.8;
+	transition: opacity 0.5s;
+}
+
+/********** SLIDE NEXT *****************/
+.menu-slide.next div{
+	min-width: min-content;
+}
+.menu-slide.next {
+	background-color: rgba(45,184,137, 1);
+	transition: background-color .5s;
+	width: min-content;
+}
+.menu-slide.next:hover {
 	background-color: rgba(45,184,137, .5);
 	transition: background-color .5s;
 }

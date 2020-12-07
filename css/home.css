@@ -6,56 +6,20 @@
 	background-size: cover;
 	min-width: 70vw;
 }
-.three {
-	width: 70vw;
-}
-.four {
-	width: 90vw;
-}
+
 
 
 /****************************** MENU ************************************/
 
-.inner-one::before {
+#broder::before {
 	background: url(../img/emilie\ rannou\ accueil\ 1\ broder\ tel\ un\ bijou.jpg);
 }
-.inner-two::before {
+#construire::before {
 	background: url(../img/emilie\ rannou\ accueil\ 2\ construire\ du\ fil\ a\ la\ matiere.jpg);
 }
-.inner-three::before {
+#animer::before {
 	background: url(../img/emilie\ rannou\ accueil\ 3\ animer\ la\ surface.jpg);
 }
-.inner-four::before {
+#composer::before {
 	background: url(../img/emilie\ rannou\ accueil\ 4\ composer\ les\ motifs\ et\ les\ couleurs.jpg);
-}
-.inner-slide {
-	position: relative;
-    z-index: 1;
-    width: 100vw;
-    height: 100vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	font-size: 1.25rem;
-	padding: 1rem;
-}
-
-.inner-slide::before {
-	content: "";
-	position: absolute;
-	top: 0; 
-	left: 0;
-	width: 100%; 
-	height: 100%;  
-	opacity: .5; 
-	transition: opacity 0.5s;
-	z-index: -1;
-	background-size: cover;
-	background-position-x: center;
-
-}
-.inner-slide:hover::before {
-	opacity: 0.8;
-	transition: opacity 0.5s;
 }
