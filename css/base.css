@@ -59,15 +59,13 @@ header{
 	width: 100vw;
 	display:flex;
 	flex-direction: row;
-	flex-wrap: wrap-reverse;
+	justify-content: space-between;
 }
 
 header h1{
 	font-size: 1rem;
 	padding: 1rem;
-	flex: 1 0 11rem;
 	color: black;
-	text-align: right;
 	font-weight: normal;
 	margin: 0;
 	padding: 1rem;
@@ -204,6 +202,9 @@ nav li.active a, a:not(.slide):not(.inner-slide):hover {
 .slide p.caps {
 	margin: 1rem 0;
 	letter-spacing: 10px
+}
+.title-caps {
+	letter-spacing: 5px
 }
 
 /************** SLIDE VARIANTS (link) ********************/
