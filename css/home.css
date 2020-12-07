@@ -9,6 +9,14 @@
 	margin-left: 0;
 }
 
+#composer::after {
+	content: "";
+	position: absolute;
+	top: 0; 
+	right: -5vw;
+	width: 5vw; 
+	height: 100%;  
+}
 
 /****************************** MENU ************************************/
 
