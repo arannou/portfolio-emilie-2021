@@ -1,0 +1,17 @@
+nav ul {
+    flex-direction: row;
+}
+
+body {
+    font-size: 1rem;
+}
+.slide.text.title{
+	font-size: 1.5rem;
+}
+.menu-slide {
+    font-size: 1.25rem;
+}
+
+.slide.text {
+    min-width: 25vw;
+}
