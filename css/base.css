@@ -230,8 +230,6 @@ nav li.active a, a:not(.slide):not(.inner-slide):hover {
 	opacity: .5; 
 	transition: opacity 0.5s;
 	z-index: -1;
-	background-size: cover;
-	background-position-x: center;
 }
 
 .menu-slide div{

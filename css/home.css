@@ -14,13 +14,21 @@
 
 #broder::before {
 	background: url(../img/emilie\ rannou\ accueil\ 1\ broder\ tel\ un\ bijou.jpg);
+	background-size: cover;
+	background-position-x: center;
 }
 #construire::before {
 	background: url(../img/emilie\ rannou\ accueil\ 2\ construire\ du\ fil\ a\ la\ matiere.jpg);
+	background-size: cover;
+	background-position-x: center;
 }
 #animer::before {
 	background: url(../img/emilie\ rannou\ accueil\ 3\ animer\ la\ surface.jpg);
+	background-size: cover;
+	background-position-x: center;
 }
 #composer::before {
 	background: url(../img/emilie\ rannou\ accueil\ 4\ composer\ les\ motifs\ et\ les\ couleurs.jpg);
+	background-size: cover;
+	background-position-x: center;
 }
