@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', fn, false);
 
 function fn() {
     displayAccordeon();
+    hideGif()
 }
 
 
@@ -36,4 +37,15 @@ function appendADiv(slide, i, position) {
     div.style.backgroundPosition = position;
     div.style.width = i * i / size + "px";
     slide.appendChild(div)
+}
+
+function hideGif() {
+    let anchor_offset = document.getElementById('parcourez').getBoundingClientRect().x
+    let container = document.getElementsByClassName("container")[0];
+    container.onscroll = function () {
+        if (this.scrollTop > anchor_offset) {
+            document.getElementById("scroll-gif").classList.add("hidden");
+            container.onscroll = null;
+        }
+    };
 }
