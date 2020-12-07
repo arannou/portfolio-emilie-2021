@@ -1,12 +1,13 @@
-.one {
-	width:auto;
-}
-.two {
+#home {
 	background: url(../img/couv2.jpg);
 	background-size: cover;
 	min-width: 70vw;
 }
 
+#parcourez {
+	padding-left: 25vw;
+	margin-left: 0;
+}
 
 
 /****************************** MENU ************************************/
