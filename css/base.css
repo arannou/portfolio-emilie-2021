@@ -171,12 +171,14 @@ nav li.active a, a:not(.slide):not(.inner-slide):hover {
 	padding: 0;
 	height: 40vh;
 	margin-top: 8rem;
-
 	position: relative;
 }
 .slide.text.high .high-container{
 	position: absolute;
 	bottom: 0;
+}
+.slide.text p{
+	margin:0;
 }
 .high-container>p:last-child {
 	margin-bottom: 0;
@@ -199,7 +201,8 @@ nav li.active a, a:not(.slide):not(.inner-slide):hover {
 .video.big video {
 	height: 95vh;
 }
-.caps {
+.slide p.caps {
+	margin: 1rem 0;
 	letter-spacing: 10px
 }
 
