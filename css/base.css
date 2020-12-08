@@ -9,7 +9,9 @@
 body {
     font-size: .7rem;
 }
-
+img {
+    pointer-events: none;
+}
 /****************************** scroll-gif ************************************/
 
 #scroll-gif {
