@@ -14,15 +14,15 @@ body {
 
 #scroll-gif {
 	position: fixed;
-	top: 15vh;
-	right: 15vh;
-	z-index: 1;
+	top: 10vh;
+	right: 10vh;
+	z-index: 2;
 	opacity: .8;
 	transition: opacity 1.5s;
 }
 
 #scroll-gif img {
-	width: 100px;
+	width: 60px;
 }
 
 #scroll-gif.hidden {
