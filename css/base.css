@@ -152,9 +152,13 @@ nav li.active a, a:not(.slide):not(.inner-slide):hover {
 
 /************** SLIDE VARIANTS (size) ********************/
 
+.slide.img.framed {
+	height: auto;
+}
 .slide.img.framed img {
 	height: 70vh;
 	margin: auto;
+	margin-bottom: 8rem;
 }
 .slide.img.small img {
 	height: 40vh;
@@ -165,6 +169,10 @@ nav li.active a, a:not(.slide):not(.inner-slide):hover {
 	margin-bottom: auto;
 	margin-top: 8rem;
 
+}
+.slide.img.low  {
+	align-self: flex-end;
+	height: auto;
 }
 .slide.img.small.low img, .slide.img.low .video{
 	margin-top: auto;
@@ -254,6 +262,7 @@ nav li.active a, a:not(.slide):not(.inner-slide):hover {
 }
 
 .menu-slide div{
+	text-align: center;
 	padding: 0 0 8rem 0;
 	margin-top: auto;
 	height: auto;
@@ -268,6 +277,7 @@ nav li.active a, a:not(.slide):not(.inner-slide):hover {
 
 /********** SLIDE NEXT *****************/
 .menu-slide.next div{
+	text-align: left;
 	min-width: min-content;
 }
 .menu-slide.next {
