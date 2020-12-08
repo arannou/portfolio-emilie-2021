@@ -15,3 +15,8 @@ body {
 .slide.text {
     min-width: 25vw;
 }
+
+.slide.contact-container {
+    min-width: max-content;
+    text-align: left;
+}

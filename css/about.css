@@ -1,0 +1,43 @@
+.slide.contact-container {
+    min-width: min-content;
+    text-align: center;
+
+}
+.contact {
+	margin-bottom: 3rem;
+}
+p.small {
+	font-size: .7rem;
+}
+.links {
+	flex-direction: column;
+}
+.links div {
+	display: inline-block;
+	border-radius: 1rem;
+	text-align: center;
+	vertical-align: top;
+	margin: .3rem
+}
+.links p {
+	max-width: 4rem;
+	padding: .1rem 0;
+}
+.links img {
+	width: 4rem;
+	border-radius: 1rem;
+}
+.links .tile {
+	padding: .3rem;
+	box-sizing: border-box;
+	width: 4rem;
+	height: 4rem;
+	background-color: rgba(45,184,137, 1);
+	transition: background-color .5s;
+}
+.links a:hover>.tile {
+	background-color: rgba(45,184,137, .5);
+	transition: background-color .5s;
+	color: black;
+}
+
