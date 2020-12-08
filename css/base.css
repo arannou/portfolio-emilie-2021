@@ -10,6 +10,26 @@ body {
     font-size: .7rem;
 }
 
+/****************************** scroll-gif ************************************/
+
+#scroll-gif {
+	position: fixed;
+	top: 15vh;
+	right: 15vh;
+	z-index: 1;
+	opacity: .8;
+	transition: opacity 1.5s;
+}
+
+#scroll-gif img {
+	width: 100px;
+}
+
+#scroll-gif.hidden {
+	opacity: 0;
+	transition: opacity 1s;
+}
+
 /****************************** SLIDER ************************************/
 body {
     margin: 0;

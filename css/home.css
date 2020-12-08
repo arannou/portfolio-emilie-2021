@@ -40,16 +40,3 @@
 	background-size: cover;
 	background-position-x: center;
 }
-
-#scroll-gif {
-	position: fixed;
-	top: 15vh;
-	right: 15vh;
-	z-index: 1;
-	opacity: .8;
-}
-
-#scroll-gif.hidden {
-	opacity: 0;
-	transition: opacity 1s;
-}

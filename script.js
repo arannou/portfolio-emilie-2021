@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', fn, false);
 
 function fn() {
     displayAccordeon();
+    showGif()
     hideGif()
 }
 
@@ -40,7 +41,7 @@ function appendADiv(slide, i, position) {
 }
 
 function hideGif() {
-    let anchor_offset = document.getElementById('parcourez').getBoundingClientRect().x
+    let anchor_offset = document.getElementsByClassName('stop-gif')[0].getBoundingClientRect().x
     let container = document.getElementsByClassName("container")[0];
     container.onscroll = function () {
         if (this.scrollTop > anchor_offset) {
@@ -48,4 +49,11 @@ function hideGif() {
             container.onscroll = null;
         }
     };
+}
+
+function showGif() {
+    setTimeout(function () {
+        document.getElementById("scroll-gif").classList.remove("hidden");
+    }, 500);
+
 }
