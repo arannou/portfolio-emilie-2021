@@ -29,3 +29,38 @@ body {
 #scroll-gif img {
 	width: 100px;
 }
+
+body {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.slide {
+    width: 70vw;
+    height: 100vh;
+    display: flex;
+}
+
+.blocHorizontal {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+}
+.container {
+    z-index: 1;
+    width: 100vh;
+    height: 100vw;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-x: hidden;
+
+    /* pour ie et mozilla */
+    -ms-overlow-style: none;
+    scrollbar-width: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}

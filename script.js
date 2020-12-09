@@ -32,19 +32,33 @@ function appendADiv(slide, i, position) {
     const regex = / /gi;
     let url = slide.getAttribute("data-image").replace(regex, "\\ ");
     let div = document.createElement("DIV");
-    div.style.height = "100vh";
+    if (window.innerWidth > 400) {
+        div.style.height = "100vh";
+        div.style.width = i * i / size + "px";
+    } else {
+        div.style.height = i * i / (size * 3) + "px";
+        div.style.width = "100vw";
+    }
     div.style.backgroundImage = "url(img/" + url + ")";
     div.style.backgroundSize = "cover";
     div.style.backgroundPosition = position;
-    div.style.width = i * i / size + "px";
     slide.appendChild(div)
 }
 
 function hideGif() {
-    let anchor_offset = document.getElementsByClassName('stop-gif')[0].getBoundingClientRect().x
-    let container = document.getElementsByClassName("container")[0];
+    let anchor_offset;
+    let container;
+    if (window.innerWidth > 400) {
+        anchor_offset = document.getElementsByClassName('stop-gif')[0].getBoundingClientRect().x;
+        container = document.getElementsByClassName("container")[0];
+    } else {
+        anchor_offset = document.getElementsByClassName('stop-gif')[0].getBoundingClientRect().y;
+        container = window;
+    }
+
     container.onscroll = function () {
-        if (this.scrollTop > anchor_offset) {
+        if ((window.innerWidth > 400 && this.scrollTop > anchor_offset)
+            || (window.innerWidth <= 400 && window.scrollY > anchor_offset)) {
             document.getElementById("scroll-gif").classList.add("hidden");
             container.onscroll = null;
         }
@@ -52,6 +66,9 @@ function hideGif() {
 }
 
 function showGif() {
+    if (window.innerWidth <= 400) {
+        document.getElementById("scroll-gif").classList.add("down");
+    }
     setTimeout(function () {
         document.getElementById("scroll-gif").classList.remove("hidden");
     }, 500);
