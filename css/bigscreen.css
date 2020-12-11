@@ -35,6 +35,7 @@ body {
 	height: 100vh;
 	overflow: hidden;
 }
+/****************************** SLIDER ************************************/
 
 .slide {
     width: 70vw;
@@ -63,4 +64,29 @@ body {
 }
 ::-webkit-scrollbar {
     display: none;
+}
+
+/****************************** GLOBAL RULES ************************************/
+
+.space-1 {
+	margin-top: 5vw;
+}
+.space-2 {
+	margin-top: 10vw;
+}
+.space-3 {
+	margin-top: 15vw;
+}
+.space-5 {
+	margin-top: 25vw;
+}
+.space-10 {
+	margin-top: 50vw;
+}
+.slide.img {
+	height: auto;
+}
+.slide.img img{
+    /* width: auto ; */
+    /* margin-top: auto; */
 }

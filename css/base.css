@@ -47,6 +47,12 @@ body {
 	flex-direction: column;
 }
 
+.slide {
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+}
+
 /****************************** HEADER ************************************/
 header{
 	z-index: 2;
