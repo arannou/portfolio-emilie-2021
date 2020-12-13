@@ -68,24 +68,28 @@ body {
 
 /****************************** GLOBAL RULES ************************************/
 
+.slide {
+    margin-top: 0;
+}
+.jerky {
+	flex-direction: row;
+}
 .space-1 {
-	margin-top: 5vw;
+	margin-left: 5vw;
 }
 .space-2 {
-	margin-top: 10vw;
+	margin-left: 10vw;
 }
 .space-3 {
-	margin-top: 15vw;
+	margin-left: 15vw;
 }
 .space-5 {
-	margin-top: 25vw;
+	margin-left: 25vw;
 }
 .space-10 {
-	margin-top: 50vw;
+	margin-left: 50vw;
 }
-.slide.img {
-	height: auto;
-}
+
 .slide.img img{
     /* width: auto ; */
     /* margin-top: auto; */

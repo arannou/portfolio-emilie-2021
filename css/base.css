@@ -53,6 +53,10 @@ body {
     display: flex;
 }
 
+.jerky {
+	flex-direction: column;
+}
+
 /****************************** HEADER ************************************/
 header{
 	z-index: 2;
@@ -109,19 +113,22 @@ nav li.active a, a:not(.slide):not(.inner-slide):hover {
 /****************************** GLOBAL RULES ************************************/
 
 .space-1 {
-	margin-left: 5vw;
+	margin-top: 5vw;
 }
 .space-2 {
-	margin-left: 10vw;
+	margin-top: 10vw;
 }
 .space-3 {
-	margin-left: 15vw;
+	margin-top: 15vw;
 }
 .space-5 {
-	margin-left: 25vw;
+	margin-top: 25vw;
 }
 .space-10 {
-	margin-left: 50vw;
+	margin-top: 50vw;
+}
+.slide.img {
+	height: auto;
 }
 .slide.img {
 	width: auto;
