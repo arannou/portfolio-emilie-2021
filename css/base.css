@@ -12,6 +12,30 @@ body {
 img {
     pointer-events: none;
 }
+
+/****************************** CHEVRON ************************************/
+.chevron {
+	position: fixed;
+	z-index: 2;
+	opacity: .7;
+	transition: opacity 1.5s;
+	top: 45vh;
+	width: 5rem;
+}
+
+.chevron:hover {
+	opacity: 1;
+	transition: opacity 1.5s;
+	cursor: pointer;
+}
+#chevron-right {
+	right: 0;
+}
+#chevron-left {
+	left: 0;
+}
+
+
 /****************************** SLIDER ************************************/
 body {
     margin: 0;

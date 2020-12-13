@@ -51,19 +51,43 @@ function setArrowNavigation() {
     } else {
         container = window;
     }
+    const step = 20;
 
+    // keyboard arrows
     window.addEventListener('keydown', function(event) {
         const key = event.key;
-        const step = 15;
         let currentPos = window.innerWidth > 400 ? container.scrollTop : window.scrollY;
         
         if (key == "ArrowRight") {
-            console.log(key, currentPos + step);
             container.scroll(0, currentPos + step);
         }
         if (key == "ArrowLeft") {
-            console.log(key, currentPos - step);
             container.scroll(0, currentPos - step);
         }
     });
+
+    // clickable arrows
+    let idRight;
+    let idLeft;
+    document.getElementById("chevron-right").onmousedown = function() {
+        idRight = setInterval(function() {
+            let currentPos = window.innerWidth > 400 ? container.scrollTop : window.scrollY;
+            container.scroll(0, currentPos + step);
+        }, 50)
+    }
+    document.getElementById("chevron-right").onmouseup = function() {
+        clearInterval(idRight)
+    }
+
+    document.getElementById("chevron-left").onmousedown = function() {
+        idLeft = setInterval(function() {
+            let currentPos = window.innerWidth > 400 ? container.scrollTop : window.scrollY;
+            container.scroll(0, currentPos - step);
+        }, 50)
+    }
+    document.getElementById("chevron-left").onmouseup = function() {
+        clearInterval(idLeft)
+    }
+
+
 }
