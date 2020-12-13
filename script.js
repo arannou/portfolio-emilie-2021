@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', fn, false);
 
 function fn() {
     displayAccordeon();
+    setArrowNavigation();
 }
 
 
@@ -41,4 +42,28 @@ function appendADiv(slide, i, position) {
     div.style.backgroundSize = "cover";
     div.style.backgroundPosition = position;
     slide.appendChild(div)
+}
+
+function setArrowNavigation() {
+    let container;
+    if (window.innerWidth > 400) {
+        container = document.getElementsByClassName("container")[0];
+    } else {
+        container = window;
+    }
+
+    window.addEventListener('keydown', function(event) {
+        const key = event.key;
+        const step = 15;
+        let currentPos = window.innerWidth > 400 ? container.scrollTop : window.scrollY;
+        
+        if (key == "ArrowRight") {
+            console.log(key, currentPos + step);
+            container.scroll(0, currentPos + step);
+        }
+        if (key == "ArrowLeft") {
+            console.log(key, currentPos - step);
+            container.scroll(0, currentPos - step);
+        }
+    });
 }
