@@ -63,7 +63,8 @@ body {
     margin-top: 0;
 }
 .jerky {
-	flex-direction: row;
+    flex-direction: row;
+    width: auto;
 }
 .space-1 {
 	margin-left: 5vw;

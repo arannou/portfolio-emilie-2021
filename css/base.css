@@ -55,6 +55,7 @@ body {
 
 .jerky {
 	flex-direction: column;
+	width: auto;
 }
 
 /****************************** HEADER ************************************/

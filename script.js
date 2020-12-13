@@ -14,29 +14,38 @@ function displayAccordeon() {
         if (slide.getAttribute("data-direction") == "increase") {
             position = "left";
             for (let i = 1; i < repeat; i++) {
-                appendADiv(slide, i, position)
+                appendADiv(slide, i, position, repeat)
             }
         } else {
             position = "right";
             for (let i = repeat; i > 1; i--) {
-                appendADiv(slide, i, position)
+                appendADiv(slide, i, position, repeat)
             }
         }
     }
+
+    let inits = document.getElementsByClassName('jerky-init');
+    for (let init of inits) {
+        const regex = / /gi;
+        let url = init.getAttribute("data-image").replace(regex, "\\ ");
+        init.style.minWidth = "100px";
+        init.style.backgroundSize = "contain";
+        init.style.backgroundImage = "url(img/" + url + ")";
+    }
 }
 
-function appendADiv(slide, i, position) {
-    let size = slide.getAttribute("data-size") == "small" ? 2 : 4;
+function appendADiv(slide, i, position, limit) {
+    let size = slide.getAttribute("data-size") == "small" ? 50 : 250;
 
     const regex = / /gi;
     let url = slide.getAttribute("data-image").replace(regex, "\\ ");
     let div = document.createElement("DIV");
     if (window.innerWidth > 400) {
         div.style.height = "100vh";
-        div.style.width = i * i / size + "px";
+        div.style.minWidth = ((-size)/(i-limit+1))*2-3.1+ "px";
     } else {
-        div.style.height = i * i / (size * 3) + "px";
-        div.style.width = "100vw";
+        div.style.height = ((-size)/(i-limit+1))*2-3.1+ "px";
+        div.style.minWidth = "100vw";
     }
     div.style.backgroundImage = "url(img/" + url + ")";
     div.style.backgroundSize = "cover";
