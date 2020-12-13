@@ -2,8 +2,6 @@ document.addEventListener('DOMContentLoaded', fn, false);
 
 function fn() {
     displayAccordeon();
-    showGif()
-    hideGif()
 }
 
 
@@ -43,34 +41,4 @@ function appendADiv(slide, i, position) {
     div.style.backgroundSize = "cover";
     div.style.backgroundPosition = position;
     slide.appendChild(div)
-}
-
-function hideGif() {
-    let anchor_offset;
-    let container;
-    if (window.innerWidth > 400) {
-        anchor_offset = document.getElementsByClassName('stop-gif')[0].getBoundingClientRect().x;
-        container = document.getElementsByClassName("container")[0];
-    } else {
-        anchor_offset = document.getElementsByClassName('stop-gif')[0].getBoundingClientRect().y;
-        container = window;
-    }
-
-    container.onscroll = function () {
-        if ((window.innerWidth > 400 && this.scrollTop > anchor_offset)
-            || (window.innerWidth <= 400 && window.scrollY > anchor_offset)) {
-            document.getElementById("scroll-gif").classList.add("hidden");
-            container.onscroll = null;
-        }
-    };
-}
-
-function showGif() {
-    if (window.innerWidth <= 400) {
-        document.getElementById("scroll-gif").classList.add("down");
-    }
-    setTimeout(function () {
-        document.getElementById("scroll-gif").classList.remove("hidden");
-    }, 500);
-
 }

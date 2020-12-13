@@ -12,30 +12,6 @@ body {
 img {
     pointer-events: none;
 }
-/****************************** scroll-gif ************************************/
-
-#scroll-gif {
-	position: fixed;
-	top: 10vh;
-	right: 10vh;
-	z-index: 2;
-	opacity: .8;
-	transition: opacity 1.5s;
-}
-
-#scroll-gif img {
-	width: 60px;
-}
-
-#scroll-gif.hidden {
-	opacity: 0;
-	transition: opacity 1s;
-}
-
-#scroll-gif.down {
-	transform: rotate(90deg);
-}
-
 /****************************** SLIDER ************************************/
 body {
     margin: 0;

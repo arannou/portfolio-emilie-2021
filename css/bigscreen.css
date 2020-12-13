@@ -21,15 +21,6 @@ body {
     text-align: left;
 }
 
-#scroll-gif {
-	top: 15vh;
-	right: 15vh;
-}
-
-#scroll-gif img {
-	width: 100px;
-}
-
 body {
 	width: 100vw;
 	height: 100vh;
