@@ -70,10 +70,11 @@ header{
 	display:flex;
 	flex-direction: row;
 	justify-content: space-between;
+	height: 5vh;
 }
 
 header .name{
-	padding: 1rem;
+	padding: .8rem;
 	margin: 0;
 }
 nav {
@@ -83,7 +84,7 @@ nav {
 nav ul {
 	display: flex;
 	flex-direction: column;
-	margin: .5rem;
+	margin: .3rem;
 	padding: 0;
 }
 
@@ -225,17 +226,18 @@ nav li.active a, a:not(.slide):not(.inner-slide):hover {
 }
 
 /************** SLIDE VARIANTS (link) ********************/
-.menu-slide {
+.slide.menu-slide {
 	position: relative;
     z-index: 1;
     width: 100vw;
-    height: 100vh;
+    height: 95vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	font-size: 1.05rem;
-	padding: 1rem;
+	margin-top: 5vh;
+	padding: 0 1rem;
 }
 
 .menu-slide::before {
