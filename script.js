@@ -101,17 +101,20 @@ function setArrowNavigation() {
 }
 
 function hideWelcome() {
-    let container;
-    if (window.innerWidth > 400) {
-        container = document.getElementsByClassName("container")[0];
-    } else {
-        container = window;
-    }
-    container.onscroll = function() {
-        let currentPos = window.innerWidth > 400 ? container.scrollTop : window.scrollY;
-        if (currentPos > 10) {
-            document.getElementById("welcome-container").classList.add("hide")
+    if (document.getElementById("welcome-container")) {
+        let container;
+        if (window.innerWidth > 400) {
+            container = document.getElementsByClassName("container")[0];
+        } else {
+            container = window;
         }
+        container.onscroll = function() {
+            let currentPos = window.innerWidth > 400 ? container.scrollTop : window.scrollY;
+            if (currentPos > 10) {
+                document.getElementById("welcome-container").classList.add("hide")
+                container.onscroll = null;
+            }
 
+        }
     }
 }
