@@ -40,3 +40,30 @@
 	background-size: cover;
 	background-position-x: center;
 }
+
+/****************************** WELCOME ************************************/
+
+.welcome {
+	position: relative;
+}
+
+#welcome-container {
+	position: absolute;
+	top: 38vh;
+	width: 100vw;
+	text-align: center;
+	opacity: 1;
+}
+.welcome-content {
+	width: 50%;
+	margin: auto;
+	background-color: rgba(255, 255, 255, 0.8);
+}
+.welcome-content h1 {
+	font-size: 2rem;
+}
+
+#welcome-container.hide {
+	opacity: 0;
+	transition: opacity 3s;
+}

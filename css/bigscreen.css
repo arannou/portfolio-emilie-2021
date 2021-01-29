@@ -26,6 +26,9 @@ body {
 	height: 100vh;
 	overflow: hidden;
 }
+.welcome-content h1 {
+	font-size: 2rem;
+}
 /****************************** SLIDER ************************************/
 
 .slide {
