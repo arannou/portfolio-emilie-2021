@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', fn, false);
-
-function fn() {
+const screenBreakPoint = 400;
+function fn() { 
     displayAccordeon();
     setArrowNavigation();
     hideWelcome();
@@ -41,7 +41,7 @@ function appendADiv(slide, i, position, limit) {
     const regex = / /gi;
     let url = slide.getAttribute("data-image").replace(regex, "\\ ");
     let div = document.createElement("DIV");
-    if (window.innerWidth > 400) {
+    if (window.innerWidth > screenBreakPoint) {
         div.style.height = "100vh";
         div.style.minWidth = ((-size)/(i-limit+1))*2-3.1+ "px";
     } else {
@@ -53,26 +53,29 @@ function appendADiv(slide, i, position, limit) {
     div.style.backgroundPosition = position;
     slide.appendChild(div)
 }
-
-function setArrowNavigation() {
+function navigate(direction) {
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     let container;
-    if (window.innerWidth > 400) {
-        container = document.getElementsByClassName("container")[0];
-    } else {
+    if (isMobile) {
         container = window;
+    } else {
+        container = document.getElementsByClassName("container")[0];
     }
     const step = 20;
+    let currentPos = isMobile ? window.scrollY : container.scrollTop;
+    container.scroll(0, currentPos + step*direction);
 
+}
+function setArrowNavigation() {
     // keyboard arrows
     window.addEventListener('keydown', function(event) {
         const key = event.key;
-        let currentPos = window.innerWidth > 400 ? container.scrollTop : window.scrollY;
-        
+
         if (key == "ArrowRight") {
-            container.scroll(0, currentPos + step);
+            navigate(1);
         }
         if (key == "ArrowLeft") {
-            container.scroll(0, currentPos - step);
+            navigate(-1);
         }
     });
 
@@ -81,8 +84,7 @@ function setArrowNavigation() {
     let idLeft;
     document.getElementById("chevron-right").onmousedown = function() {
         idRight = setInterval(function() {
-            let currentPos = window.innerWidth > 400 ? container.scrollTop : window.scrollY;
-            container.scroll(0, currentPos + step);
+            navigate(1);
         }, 50)
     }
     document.getElementById("chevron-right").onmouseup = function() {
@@ -91,8 +93,7 @@ function setArrowNavigation() {
 
     document.getElementById("chevron-left").onmousedown = function() {
         idLeft = setInterval(function() {
-            let currentPos = window.innerWidth > 400 ? container.scrollTop : window.scrollY;
-            container.scroll(0, currentPos - step);
+            navigate(-1);
         }, 50)
     }
     document.getElementById("chevron-left").onmouseup = function() {
@@ -103,13 +104,13 @@ function setArrowNavigation() {
 function hideWelcome() {
     if (document.getElementById("welcome-container")) {
         let container;
-        if (window.innerWidth > 400) {
+        if (window.innerWidth > screenBreakPoint) {
             container = document.getElementsByClassName("container")[0];
         } else {
             container = window;
         }
         container.onscroll = function() {
-            let currentPos = window.innerWidth > 400 ? container.scrollTop : window.scrollY;
+            let currentPos = window.innerWidth > screenBreakPoint ? container.scrollTop : window.scrollY;
             if (currentPos > 120) {
                 document.getElementById("welcome-container").classList.add("hide")
                 container.onscroll = null;
