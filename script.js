@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', fn, false);
 const screenBreakPoint = 400;
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
 function fn() { 
     displayAccordeon();
     setArrowNavigation();
@@ -53,16 +55,16 @@ function appendADiv(slide, i, position, limit) {
     div.style.backgroundPosition = position;
     slide.appendChild(div)
 }
+
 function navigate(direction) {
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     let container;
-    if (isMobile) {
+    if (window.innerWidth < screenBreakPoint) {
         container = window;
     } else {
         container = document.getElementsByClassName("container")[0];
     }
     const step = 20;
-    let currentPos = isMobile ? window.scrollY : container.scrollTop;
+    let currentPos = window.innerWidth < screenBreakPoint ? window.scrollY : container.scrollTop;
     container.scroll(0, currentPos + step*direction);
 
 }
@@ -82,23 +84,29 @@ function setArrowNavigation() {
     // clickable arrows
     let idRight;
     let idLeft;
-    document.getElementById("chevron-right").onmousedown = function() {
+    let eventPrefix = isMobile ? "touch" : "mouse";
+    let eventSuffixStart = isMobile ? "start" : "down";
+    let eventSuffixEnd = isMobile ? "end" : "up";
+    document.getElementById("chevron-right").oncontextmenu = function() { return false;}
+    document.getElementById("chevron-left").oncontextmenu = function() { return false;}
+    document.getElementById("chevron-right").addEventListener(eventPrefix+eventSuffixStart, function() {
+        console.log(eventPrefix+eventSuffixStart)
         idRight = setInterval(function() {
             navigate(1);
         }, 50)
-    }
-    document.getElementById("chevron-right").onmouseup = function() {
+    });
+    document.getElementById("chevron-right").addEventListener(eventPrefix+eventSuffixEnd, function() {
         clearInterval(idRight)
-    }
+    });
 
-    document.getElementById("chevron-left").onmousedown = function() {
+    document.getElementById("chevron-left").addEventListener(eventPrefix+eventSuffixStart, function() {
         idLeft = setInterval(function() {
             navigate(-1);
         }, 50)
-    }
-    document.getElementById("chevron-left").onmouseup = function() {
+    });
+    document.getElementById("chevron-left").addEventListener(eventPrefix+eventSuffixEnd, function() {
         clearInterval(idLeft)
-    }
+    });
 }
 
 function hideWelcome() {
