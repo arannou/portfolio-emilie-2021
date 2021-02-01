@@ -110,7 +110,7 @@ function hideWelcome() {
         }
         container.onscroll = function() {
             let currentPos = window.innerWidth > 400 ? container.scrollTop : window.scrollY;
-            if (currentPos > 10) {
+            if (currentPos > 120) {
                 document.getElementById("welcome-container").classList.add("hide")
                 container.onscroll = null;
             }
