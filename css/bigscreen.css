@@ -1,91 +1,22 @@
 nav ul {
-    flex-direction: row;
+  flex-direction: row;
 }
 
 body {
-    font-size: 1rem;
+  font-size: 1rem;
 }
-.slide.text.title{
-	font-size: 1.5rem;
+.slide.text.title {
+  font-size: 1.5rem;
 }
 .menu-slide {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 
 .slide.text {
-    min-width: 25vw;
+  min-width: 25vw;
 }
 
 .slide.contact-container {
-    min-width: max-content;
-    text-align: left;
-}
-
-body {
-	width: 100vw;
-	height: 100vh;
-	overflow: hidden;
-}
-.welcome-content h1 {
-	font-size: 2rem;
-}
-/****************************** SLIDER ************************************/
-
-.slide {
-    width: 70vw;
-    height: 100vh;
-    display: flex;
-}
-
-.blocHorizontal {
-    display: flex;
-    flex-direction: row;
-    width: auto;
-    transform: rotate(90deg) translateY(-100vh);
-    transform-origin: top left;
-}
-.container {
-    z-index: 1;
-    width: 100vh;
-    height: 100vw;
-    transform: rotate(-90deg) translateX(-100vh);
-    transform-origin: top left;
-    overflow-x: hidden;
-
-    /* pour ie et mozilla */
-    -ms-overlow-style: none;
-    scrollbar-width: none;
-}
-::-webkit-scrollbar {
-    display: none;
-}
-
-/****************************** GLOBAL RULES ************************************/
-
-.slide {
-    margin-top: 0;
-}
-.jerky {
-    flex-direction: row;
-    width: auto;
-}
-.space-1 {
-	margin-left: 5vw;
-}
-.space-2 {
-	margin-left: 10vw;
-}
-.space-3 {
-	margin-left: 15vw;
-}
-.space-5 {
-	margin-left: 25vw;
-}
-.space-10 {
-	margin-left: 50vw;
-}
-
-.slide.img img{
-    /* width: auto ; */
-    /* margin-top: auto; */
+  min-width: max-content;
+  text-align: left;
 }
