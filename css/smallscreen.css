@@ -1,12 +1,4 @@
-body.mobile {
-    /* height: auto;
-    width: auto;
-    overflow: initial; */
-  }
   .mobile .blocHorizontal {
-    /* display: flex;
-    flex-direction: row;
-    width: auto; */
     transform: none;
   }
   .mobile .container {
@@ -23,10 +15,13 @@ body.mobile {
   }
   
   .mobile .slide {
-    width: 70vw;
     height: 100vh;
     display: flex;
     margin-top: 0;
+  }
+
+  .mobile .slide.text {
+      min-width: 70vw;
   }
 
   .mobile .jerky {
