@@ -6,6 +6,9 @@ function fn() {
     displayAccordeon();
     setArrowNavigation();
     hideWelcome();
+    if (isMobile) {
+        document.body.classList.add("mobile")
+    }
 }
 
 
@@ -43,13 +46,8 @@ function appendADiv(slide, i, position, limit) {
     const regex = / /gi;
     let url = slide.getAttribute("data-image").replace(regex, "\\ ");
     let div = document.createElement("DIV");
-    if (window.innerWidth > screenBreakPoint) {
-        div.style.height = "100vh";
-        div.style.minWidth = ((-size)/(i-limit+1))*2-3.1+ "px";
-    } else {
-        div.style.height = ((-size)/(i-limit+1))*2-3.1+ "px";
-        div.style.minWidth = "100vw";
-    }
+    div.style.height = "100vh";
+    div.style.minWidth = ((-size)/(i-limit+1))*2-3.1+ "px";
     div.style.backgroundImage = "url(img/" + url + ")";
     div.style.backgroundSize = "cover";
     div.style.backgroundPosition = position;
@@ -58,14 +56,15 @@ function appendADiv(slide, i, position, limit) {
 
 function navigate(direction) {
     let container;
-    if (window.innerWidth < screenBreakPoint) {
-        container = window;
-    } else {
-        container = document.getElementsByClassName("container")[0];
-    }
     const step = 20;
-    let currentPos = window.innerWidth < screenBreakPoint ? window.scrollY : container.scrollTop;
-    container.scroll(0, currentPos + step*direction);
+
+    container = document.getElementsByClassName("container")[0];
+    
+    if (isMobile) {
+        container.scroll(container.scrollLeft + step*direction, 0);
+    } else {
+        container.scroll(0, container.scrollTop + step*direction);
+    }
 
 }
 function setArrowNavigation() {
@@ -90,7 +89,6 @@ function setArrowNavigation() {
     document.getElementById("chevron-right").oncontextmenu = function() { return false;}
     document.getElementById("chevron-left").oncontextmenu = function() { return false;}
     document.getElementById("chevron-right").addEventListener(eventPrefix+eventSuffixStart, function() {
-        console.log(eventPrefix+eventSuffixStart)
         idRight = setInterval(function() {
             navigate(1);
         }, 50)
