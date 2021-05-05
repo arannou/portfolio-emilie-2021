@@ -1,0 +1,35 @@
+body.mobile {
+    /* height: auto;
+    width: auto;
+    overflow: initial; */
+  }
+  .mobile .blocHorizontal {
+    /* display: flex;
+    flex-direction: row;
+    width: auto; */
+    transform: none;
+  }
+  .mobile .container {
+    z-index: 1;
+    height: auto;
+    width: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    transform: none;
+  }
+  
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .mobile .slide {
+    width: 70vw;
+    height: 100vh;
+    display: flex;
+    margin-top: 0;
+  }
+
+  .mobile .jerky {
+    flex-direction: row;
+    width: auto;
+  }
