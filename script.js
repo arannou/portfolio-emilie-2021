@@ -9,6 +9,7 @@ function fn() {
     if (isMobile) {
         document.body.classList.add("mobile")
     }
+    showDesktopOrMobileWelcome()
 }
 
 
@@ -55,11 +56,9 @@ function appendADiv(slide, i, position, limit) {
 }
 
 function navigate(direction) {
-    let container;
+    let container = document.getElementsByClassName("container")[0];;
     const step = 20;
 
-    container = document.getElementsByClassName("container")[0];
-    
     if (isMobile) {
         container.scroll(container.scrollLeft + step*direction, 0);
     } else {
@@ -108,20 +107,36 @@ function setArrowNavigation() {
 }
 
 function hideWelcome() {
-    if (document.getElementById("welcome-container")) {
-        let container;
-        if (window.innerWidth > screenBreakPoint) {
-            container = document.getElementsByClassName("container")[0];
-        } else {
-            container = window;
-        }
-        container.onscroll = function() {
-            let currentPos = window.innerWidth > screenBreakPoint ? container.scrollTop : window.scrollY;
-            if (currentPos > 120) {
-                document.getElementById("welcome-container").classList.add("hide")
+    let container = document.getElementsByClassName("container")[0];
+
+    container.onscroll = function() {
+        let currentPos = !isMobile ? container.scrollTop : container.scrollLeft;
+        let welcome = document.getElementById("welcome-container");
+        if (welcome && currentPos > 120) {
+            welcome.classList.add("hide")
+            if (!isMobile) {
                 container.onscroll = null;
             }
-
         }
+        if (isMobile & currentPos > 200) {
+            let chevrons = document.getElementsByClassName("chevron");
+            for (let c of chevrons) {
+                c.classList.add("hide")
+                setTimeout(function(){ c.style.display = "none"; }, 3000);
+            }
+        }
+        
+    }
+    
+}
+
+function showDesktopOrMobileWelcome() {
+    if (!isMobile) {
+        content = document.getElementsByClassName("welcome-mobile");
+    } else {
+        content = document.getElementsByClassName("welcome-desktop");
+    }
+    for (let c of content) {
+        c.style.display = "none"
     }
 }
