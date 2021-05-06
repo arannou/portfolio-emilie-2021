@@ -1,30 +1,67 @@
-  .mobile .blocHorizontal {
-    transform: none;
-  }
-  .mobile .container {
-    z-index: 1;
-    height: auto;
+.mobile .blocHorizontal {
+  transform: none;
+}
+.mobile .container {
+  z-index: 1;
+  height: auto;
+  width: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  transform: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.mobile .slide {
+  height: 100vh;
+  display: flex;
+  margin-top: 0;
+}
+
+.mobile .slide.text:not(.contact-container) {
     width: auto;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    transform: none;
-  }
-  
-  ::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .mobile .slide {
-    height: 100vh;
-    display: flex;
-    margin-top: 0;
-  }
+    max-width: 70vw;
+    min-width: auto;
+}
+.mobile .slide.text.text-large, .mobile .slide.contact-container {
+  max-width: 70vw;
+  min-width: 70vw;
+  text-align: left;
+}
 
-  .mobile .slide.text {
-      min-width: 70vw;
-  }
+.mobile .jerky {
+  flex-direction: row;
+  width: auto;
+}
 
-  .mobile .jerky {
+.mobile .slide.text.title {
+  font-size: 1.2rem;
+}
+
+.mobile .menu-slide {
+  font-size: 1.05rem;
+
+}
+
+.mobile {
+  font-size: 0.7rem;
+}
+
+@media only screen and (min-width: 400px) {
+  nav ul {
     flex-direction: row;
-    width: auto;
   }
+  
+  .slide.contact-container {
+    min-width: max-content;
+    text-align: left;
+  }
+
+  .mobile .slide.text.text-large {
+    max-width: 40vw;
+    min-width: 40vw;
+    text-align: left;
+  }
+}
