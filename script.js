@@ -4,10 +4,11 @@ const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
 function fn() { 
     displayAccordeon();
-    setArrowNavigation();
     hideWelcome();
     if (isMobile) {
         document.body.classList.add("mobile")
+    } else {
+        setArrowNavigation();
     }
     showDesktopOrMobileWelcome()
 }
@@ -116,13 +117,6 @@ function hideWelcome() {
             welcome.classList.add("hide")
             if (!isMobile) {
                 container.onscroll = null;
-            }
-        }
-        if (isMobile & currentPos > 200) {
-            let chevrons = document.getElementsByClassName("chevron");
-            for (let c of chevrons) {
-                c.classList.add("hide")
-                setTimeout(function(){ c.style.display = "none"; }, 3000);
             }
         }
         

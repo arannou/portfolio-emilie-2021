@@ -32,9 +32,8 @@ img {
   left: 0;
 }
 
-.chevron.hide {
-	opacity: 0;
-	transition: opacity 3s;
+.mobile .chevron {
+  display: none;
 }
 
 /****************************** SLIDER ************************************/
@@ -197,7 +196,6 @@ a:not(.slide):not(.inner-slide):hover {
 .slide.text.title {
   font-size: 1.5rem;
 }
-
 
 .slide.text p {
   margin: 0;
