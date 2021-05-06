@@ -21,11 +21,12 @@
 }
 
 .mobile .slide.text:not(.contact-container) {
-    width: auto;
-    max-width: 70vw;
-    min-width: auto;
+  width: auto;
+  max-width: 70vw;
+  min-width: auto;
 }
-.mobile .slide.text.text-large, .mobile .slide.contact-container {
+.mobile .slide.text.text-large,
+.mobile .slide.contact-container {
   max-width: 70vw;
   min-width: 70vw;
   text-align: left;
@@ -42,7 +43,6 @@
 
 .mobile .menu-slide {
   font-size: 1.05rem;
-
 }
 
 .mobile {
@@ -53,7 +53,7 @@
   nav ul {
     flex-direction: row;
   }
-  
+
   .slide.contact-container {
     min-width: max-content;
     text-align: left;
@@ -63,5 +63,12 @@
     max-width: 40vw;
     min-width: 40vw;
     text-align: left;
+  }
+
+  .mobile #welcome-container {
+    top: 18vh;
+  }
+  .mobile img.welcome-mobile {
+    width: 50%;
   }
 }
