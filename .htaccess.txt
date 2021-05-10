@@ -1,3 +1,5 @@
+ErrorDocument 404 /404.html
+
 <Files ~ "\.(jpg|jpeg|png|gif)$">
    order deny,allow
    allow from all
