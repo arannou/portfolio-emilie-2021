@@ -37,15 +37,17 @@
   width: auto;
 }
 
-.mobile .slide.text.title {
+.mobile h1 {
   font-size: 1.2rem;
+  font-weight: normal;
 }
 
 .mobile .menu-slide {
   font-size: 1.05rem;
 }
 
-.mobile {
+.mobile,
+.mobile h2 {
   font-size: 0.7rem;
 }
 

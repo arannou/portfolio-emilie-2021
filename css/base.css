@@ -193,10 +193,14 @@ a:not(.slide):not(.inner-slide):hover {
   flex-direction: column;
   min-width: 25vw;
 }
-.slide.text.title {
+h1 {
   font-size: 1.5rem;
+  font-weight: normal;
 }
-
+h2 {
+  font-size: 1rem;
+  font-weight: normal;
+}
 .slide.text p {
   margin: 0;
 }
@@ -218,7 +222,7 @@ a:not(.slide):not(.inner-slide):hover {
 .video.big video {
   height: 95vh;
 }
-.slide p.caps {
+.slide .caps {
   margin: 1rem 0;
   letter-spacing: 10px;
 }
